@@ -1,5 +1,5 @@
 // Copy of extension(s) that are used in my project, but won't be seen in the toolbox
-namespace sprites {
+namespace sprites1 {
     export function setDataNumber(sprite: Sprite, name: string, value: number) {
         if (!sprite || !name) return;
         const d = sprite.data;
@@ -16,7 +16,7 @@ namespace sprites {
         return d[name] as number;
     }
 }
-namespace tileUtil {
+namespace tileUtil1 {
 export function onMapLoaded(cb: (tilemap: tiles.TileMapData) => void) {
     tiles.addEventListener(tiles.TileMapEvent.Loaded, cb);
 }
