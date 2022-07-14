@@ -36,10 +36,12 @@ namespace MiniTilemaps {
     }
 }
 tileUtil.onMapUnloaded(function () {
-
+    TileCollisionArrayY = []
+    TileCollisionArrayX = []
 })
 tileUtil.onMapLoaded(function () {
-
+    TileCollisionArrayY = []
+    TileCollisionArrayX = []
 })
 game.onUpdate(function () {
     if (TileCollisionArrayX.length != 0) {
