@@ -30,8 +30,6 @@ namespace MiniTilemaps {
     }
     //% block="Clear all mini tilemaps"
     export function ClearAll() {
-        let TileCollisionArrayX = [0]
-        let TileCollisionArrayY = [0]
         TileCollisionArrayX = []
         TileCollisionArrayY = []
     }
