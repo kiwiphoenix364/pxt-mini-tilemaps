@@ -16,3 +16,11 @@ namespace sprites {
         return d[name] as number;
     }
 }
+namespace tileUtil {
+export function onMapLoaded(cb: (tilemap: tiles.TileMapData) => void) {
+    tiles.addEventListener(tiles.TileMapEvent.Loaded, cb);
+}
+export function onMapUnloaded(cb: (tilemap: tiles.TileMapData) => void) {
+    tiles.addEventListener(tiles.TileMapEvent.Unloaded, cb);
+}
+}

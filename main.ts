@@ -35,6 +35,12 @@ namespace MiniTilemaps {
         TileCollisionArrayY = []
     }
 }
+tileUtil.onMapUnloaded(function () {
+
+})
+tileUtil.onMapLoaded(function () {
+
+})
 game.onUpdate(function () {
     if (TileCollisionArrayX.length != 0) {
         for (let mySprite of sprites.allOfKind(SpriteKind.AffectedByPhysics)) {
