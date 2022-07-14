@@ -11,6 +11,7 @@ let TileCollisionArrayY = [0]
 let TileCollisionArrayX = [0]
 TileCollisionArrayY = []
 TileCollisionArrayX = []
+//% color="#287d81"
 namespace MiniTilemaps {
     //% block="Generate mini tilemap on all $selected tiles with collision $collisionImg"
     //% selected.shadow=tileset_tile_picker
