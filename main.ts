@@ -34,7 +34,6 @@ let TileCollisionArrayY = [0]
 let TileCollisionArrayX = [0]
 TileCollisionArrayY = []
 TileCollisionArrayX = []
-
 tileUtil1.onMapUnloaded(function () {
     TileCollisionArrayY = []
     TileCollisionArrayX = []
