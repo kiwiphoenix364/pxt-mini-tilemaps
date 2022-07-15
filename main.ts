@@ -1,16 +1,3 @@
-namespace SpriteKind {
-    //% isKind
-    export const AffectedByPhysics = SpriteKind.create()
-}
-let cany = 0
-let canx = 0
-let repeat = 0
-let cury = 0
-let curx = 0
-let TileCollisionArrayY = [0]
-let TileCollisionArrayX = [0]
-TileCollisionArrayY = []
-TileCollisionArrayX = []
 //% color="#287d81"
 namespace MiniTilemaps {
     //% block="Generate mini tilemap on all $selected tiles with collision $collisionImg"
@@ -34,6 +21,20 @@ namespace MiniTilemaps {
         TileCollisionArrayY = []
     }
 }
+namespace SpriteKind {
+    //% isKind
+    export const AffectedByPhysics = SpriteKind.create()
+}
+let cany = 0
+let canx = 0
+let repeat = 0
+let cury = 0
+let curx = 0
+let TileCollisionArrayY = [0]
+let TileCollisionArrayX = [0]
+TileCollisionArrayY = []
+TileCollisionArrayX = []
+
 tileUtil1.onMapUnloaded(function () {
     TileCollisionArrayY = []
     TileCollisionArrayX = []
