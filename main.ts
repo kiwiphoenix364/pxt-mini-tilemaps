@@ -8,8 +8,8 @@ namespace MiniTilemaps {
             for (let index32 = 0; index32 <= collisionImg.width; index32++) {
                 for (let index23 = 0; index23 <= collisionImg.height; index23++) {
                     if (0 != collisionImg.getPixel(index32, index23)) {
-                        TileCollisionArrayX.push(value2.column * 16 + index32)
-                        TileCollisionArrayY.push(value2.row * 16 + index23)
+                        TileCollisionArrayX.push(value2.column * 16 + index32 + 1)
+                        TileCollisionArrayY.push(value2.row * 16 + index23 + 1)
                     }
                 }
             }
@@ -57,7 +57,7 @@ game.onUpdate(function () {
                         mySprite.x += (curx - sprites1.readDataNumber(mySprite, "prevx")) / repeat
                         for (let index2 = 0; index2 <= TileCollisionArrayX.length; index2++) {
                             if (canx == 1) {
-                                if (TileCollisionArrayX[index2] - mySprite.left >= 0 && TileCollisionArrayX[index2] - mySprite.left < mySprite.width && (TileCollisionArrayY[index2] - mySprite.top >= 0 && TileCollisionArrayY[index2] - mySprite.top < mySprite.height)) {
+                                if (TileCollisionArrayX[index2] - mySprite.left >= 0 && TileCollisionArrayX[index2] - mySprite.left <= mySprite.width && (TileCollisionArrayY[index2] - mySprite.top >= 0 && TileCollisionArrayY[index2] - mySprite.top <= mySprite.height)) {
                                     if (mySprite.image.getPixel(TileCollisionArrayX[index2] - mySprite.left, TileCollisionArrayY[index2] - mySprite.top) != 0) {
                                         mySprite.x += 0 - (curx - sprites1.readDataNumber(mySprite, "prevx")) / repeat
                                         canx = 0
@@ -70,7 +70,7 @@ game.onUpdate(function () {
                         mySprite.y += (cury - sprites1.readDataNumber(mySprite, "prevy")) / repeat
                         for (let index22 = 0; index22 <= TileCollisionArrayY.length; index22++) {
                             if (cany == 1) {
-                                if (TileCollisionArrayX[index22] - mySprite.left >= 0 && TileCollisionArrayX[index22] - mySprite.left < mySprite.width && (TileCollisionArrayY[index22] - mySprite.top >= 0 && TileCollisionArrayY[index22] - mySprite.top < mySprite.height)) {
+                                if (TileCollisionArrayX[index22] - mySprite.left >= 0 && TileCollisionArrayX[index22] - mySprite.left <= mySprite.width && (TileCollisionArrayY[index22] - mySprite.top >= 0 && TileCollisionArrayY[index22] - mySprite.top <= mySprite.height)) {
                                     if (mySprite.image.getPixel(TileCollisionArrayX[index22] - mySprite.left, TileCollisionArrayY[index22] - mySprite.top) != 0) {
                                         mySprite.y += 0 - (cury - sprites1.readDataNumber(mySprite, "prevy")) / repeat
                                         cany = 0
