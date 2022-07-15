@@ -8,8 +8,8 @@ namespace MiniTilemaps {
             for (let index32 = 0; index32 <= collisionImg.width; index32++) {
                 for (let index23 = 0; index23 <= collisionImg.height; index23++) {
                     if (0 != collisionImg.getPixel(index32, index23)) {
-                        TileCollisionArrayX.push(value2.column * 16 + index32 + 1)
-                        TileCollisionArrayY.push(value2.row * 16 + index23 + 1)
+                        TileCollisionArrayX.push(value2.column * 16 + index32)
+                        TileCollisionArrayY.push(value2.row * 16 + index23)
                     }
                 }
             }
