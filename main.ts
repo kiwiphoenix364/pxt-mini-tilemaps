@@ -52,9 +52,8 @@ game.onUpdate(function () {
             canx = 1
             cany = 1
             for (let index = 0; index <= repeat; index++) {
-                if (index > 0 && repeat > 1) {
                     if (canx == 1) {
-                        mySprite.x += (curx - sprites1.readDataNumber(mySprite, "prevx")) / repeat
+                        mySprite.x = ((curx - sprites1.readDataNumber(mySprite, "prevx")) / repeat) * index
                         for (let index2 = 0; index2 <= TileCollisionArrayX.length; index2++) {
                             if (canx == 1) {
                                 if (TileCollisionArrayX[index2] - mySprite.left + 1 >= 0 && TileCollisionArrayX[index2] - mySprite.left - 1 <= mySprite.width && (TileCollisionArrayY[index2] - mySprite.top + 1 > 0 && TileCollisionArrayY[index2] - mySprite.top - 1 < mySprite.height)) {
@@ -67,7 +66,7 @@ game.onUpdate(function () {
                         }
                     }
                     if (cany == 1) {
-                        mySprite.y += (cury - sprites1.readDataNumber(mySprite, "prevy")) / repeat
+                        mySprite.y = ((cury - sprites1.readDataNumber(mySprite, "prevy")) / repeat) * index
                         for (let index22 = 0; index22 <= TileCollisionArrayY.length; index22++) {
                             if (cany == 1) {
                                 if (TileCollisionArrayX[index22] - mySprite.left + 1 >= 0 && TileCollisionArrayX[index22] - mySprite.left - 1 <= mySprite.width && (TileCollisionArrayY[index22] - mySprite.top + 1 > 0 && TileCollisionArrayY[index22] - mySprite.top - 1 < mySprite.height)) {
@@ -79,7 +78,6 @@ game.onUpdate(function () {
                             }
                         }
                     }
-                }
             }
             sprites1.setDataNumber(mySprite, "prevx", mySprite.x)
             sprites1.setDataNumber(mySprite, "prevy", mySprite.y)
