@@ -48,7 +48,7 @@ game.onUpdate(function () {
             curx = mySprite.x
             cury = mySprite.y
             mySprite.setPosition(sprites1.readDataNumber(mySprite, "prevx"), sprites1.readDataNumber(mySprite, "prevy"))
-            repeat = Math.abs(curx - sprites1.readDataNumber(mySprite, "prevx")) + Math.abs(cury - sprites1.readDataNumber(mySprite, "prevy"))
+            repeat = Math.min(1, Math.abs(curx - sprites1.readDataNumber(mySprite, "prevx")) + Math.abs(cury - sprites1.readDataNumber(mySprite, "prevy")))
             canx = 1
             cany = 1
             for (let index = 0; index <= repeat; index++) {
