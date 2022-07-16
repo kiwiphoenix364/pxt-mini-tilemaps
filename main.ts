@@ -51,7 +51,7 @@ game.onUpdate(function () {
             repeat = Math.abs(curx - sprites1.readDataNumber(mySprite, "prevx")) + Math.abs(cury - sprites1.readDataNumber(mySprite, "prevy"))
             canx = 1
             cany = 1
-            if (repeat > 1) {
+            if (repeat > 0) {
                 for (let index = 0; index <= repeat; index++) {
                     if (canx == 1) {
                         mySprite.x += (curx - sprites1.readDataNumber(mySprite, "prevx")) / repeat
