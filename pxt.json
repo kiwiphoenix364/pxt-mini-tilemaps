@@ -8,8 +8,7 @@
     "files": [
         "main.blocks",
         "main.ts",
-        "assets.json",
-        "Imported-Extensions.ts"
+        "assets.json"
     ],
     "testFiles": [
         "test.ts"
