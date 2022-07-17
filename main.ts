@@ -52,7 +52,7 @@ game.onUpdate(function () {
             canx = 1
             cany = 1
             if (repeat > 0) {
-                for (let index = 0; index <= repeat; index++) {
+                for (let index = 0; index <= repeat * 2; index++) {
                     if (canx == 1) {
                         mySprite.x += (curx - sprites1.readDataNumber(mySprite, "prevx")) / repeat
                         for (let index2 = 0; index2 <= TileCollisionArrayX.length; index2++) {
