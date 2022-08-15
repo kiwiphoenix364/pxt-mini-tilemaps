@@ -8,14 +8,13 @@
     "files": [
         "main.blocks",
         "main.ts",
-        "assets.json",
-        "Imported-Extensions.ts"
+        "assets.json"
     ],
     "testFiles": [
         "test.ts"
     ],
     "targetVersions": {
-        "target": "1.8.29",
+        "target": "1.8.30",
         "targetId": "arcade"
     },
     "supportedTargets": [
