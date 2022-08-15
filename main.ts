@@ -2,7 +2,7 @@ namespace SpriteKind {
     //% isKind
     export const AffectedByPhysics = SpriteKind.create()
 }
-//% color="#287d81"
+// color="#287d81"
 namespace MiniTilemaps {
     //% block="Generate mini tilemap on all $selected tiles with collision $collisionImg"
     //% selected.shadow=tileset_tile_picker
