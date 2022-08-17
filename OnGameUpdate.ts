@@ -7,11 +7,3 @@ let TileCollisionArrayY = [0]
 let TileCollisionArrayX = [0]
 TileCollisionArrayY = []
 TileCollisionArrayX = []
-MiniTilemaps.onMapUnloaded(function () {
-    TileCollisionArrayY = []
-    TileCollisionArrayX = []
-})
-MiniTilemaps.onMapLoaded(function () {
-    TileCollisionArrayY = []
-    TileCollisionArrayX = []
-})
