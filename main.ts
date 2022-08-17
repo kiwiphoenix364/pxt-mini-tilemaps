@@ -24,7 +24,8 @@ namespace MiniTilemaps {
         TileCollisionArrayX = []
         TileCollisionArrayY = []
     }
-    // Small Parts of Extensions Used in my Extension, Credit to Makecode Devs.
+    
+    // Small useful functions of extensions used in my extension, credit to MakeCode devs.
     export function setDataNumber(sprite: Sprite, name: string, value: number) {
         if (!sprite || !name) return;
         const d = sprite.data;
