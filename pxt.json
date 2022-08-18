@@ -8,8 +8,7 @@
     "files": [
         "main.blocks",
         "main.ts",
-        "assets.json",
-        "OnGameUpdate.ts"
+        "assets.json"
     ],
     "testFiles": [
         "test.ts"
