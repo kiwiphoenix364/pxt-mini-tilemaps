@@ -124,12 +124,12 @@ game.onUpdate(function () {
                 for (let index = 0; index <= repeat; index++) {
                     if (canx == 1) {
                         mySprite.x += (curx - MiniTilemaps.readDataNumber(mySprite, "prevx")) / repeat
-                            if (canx == 1) {
+                        if (canx == 1) {
                             for (let i = 0; i < mySprite.width; i++) {
                                 for (let j = 0; j < mySprite.height; j++) {
-                                    if (TileCollisionArrayX.indexOf(i) != -1 && TileCollisionArrayY.indexOf(j) != -1) {
-                                    mySprite.x += 0 - (curx - MiniTilemaps.readDataNumber(mySprite, "prevx")) / repeat
-                                    canx = 0
+                                    if (TileCollisionArrayX.indexOf(i + Math.round(mySprite.left)) != -1 && TileCollisionArrayY.indexOf(j + Math.round(mySprite.top)) != -1) {
+                                        mySprite.x += 0 - (curx - MiniTilemaps.readDataNumber(mySprite, "prevx")) / repeat
+                                        canx = 0
                                     }
                                 }
                             }
@@ -141,7 +141,7 @@ game.onUpdate(function () {
                             if (cany == 1) {
                                 for (let i = 0; i < mySprite.width; i++) {
                                     for (let j = 0; j < mySprite.height; j++) {
-                                        if (TileCollisionArrayX.indexOf(i) != -1 && TileCollisionArrayY.indexOf(j) != -1) {
+                                        if (TileCollisionArrayX.indexOf(i + Math.round(mySprite.left)) != -1 && TileCollisionArrayY.indexOf(j + Math.round(mySprite.top)) != -1) {
                                             mySprite.y += 0 - (cury - MiniTilemaps.readDataNumber(mySprite, "prevy")) / repeat
                                             cany = 0
                                         }
