@@ -65,6 +65,7 @@ MiniTilemaps.onMapLoaded(function () {
     TileCollisionArrayY = []
     TileCollisionArrayX = []
 })
+/*
 game.onUpdate(function () {
     if (TileCollisionArrayX.length != 0) {
         for (let mySprite of sprites.allOfKind(SpriteKind.AffectedByPhysics)) {
@@ -97,6 +98,53 @@ game.onUpdate(function () {
                                     if (mySprite.image.getPixel(TileCollisionArrayX[index22] - mySprite.left, TileCollisionArrayY[index22] - mySprite.top) != 0) {
                                         mySprite.y += 0 - (cury - MiniTilemaps.readDataNumber(mySprite, "prevy")) / repeat
                                         cany = 0
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            MiniTilemaps.setDataNumber(mySprite, "prevx", mySprite.x)
+            MiniTilemaps.setDataNumber(mySprite, "prevy", mySprite.y)
+        }
+    }
+})
+*/
+game.onUpdate(function () {
+    if (TileCollisionArrayX.length != 0) {
+        for (let mySprite of sprites.allOfKind(SpriteKind.AffectedByPhysics)) {
+            curx = mySprite.x
+            cury = mySprite.y
+            mySprite.setPosition(MiniTilemaps.readDataNumber(mySprite, "prevx"), MiniTilemaps.readDataNumber(mySprite, "prevy"))
+            repeat = (Math.abs(curx - MiniTilemaps.readDataNumber(mySprite, "prevx")) + Math.abs(cury - MiniTilemaps.readDataNumber(mySprite, "prevy"))) * 2
+            canx = 1
+            cany = 1
+            if (repeat > 0) {
+                for (let index = 0; index <= repeat; index++) {
+                    if (canx == 1) {
+                        mySprite.x += (curx - MiniTilemaps.readDataNumber(mySprite, "prevx")) / repeat
+                            if (canx == 1) {
+                            for (let i = 0; i < mySprite.width; i++) {
+                                for (let j = 0; j < mySprite.height; j++) {
+                                    if (TileCollisionArrayX.indexOf(i) != -1 && TileCollisionArrayY.indexOf(j) != -1) {
+                                    mySprite.x += 0 - (curx - MiniTilemaps.readDataNumber(mySprite, "prevx")) / repeat
+                                    canx = 0
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    if (cany == 1) {
+                        mySprite.y += (cury - MiniTilemaps.readDataNumber(mySprite, "prevy")) / repeat
+                        for (let index22 = 0; index22 <= TileCollisionArrayY.length; index22++) {
+                            if (cany == 1) {
+                                for (let i = 0; i < mySprite.width; i++) {
+                                    for (let j = 0; j < mySprite.height; j++) {
+                                        if (TileCollisionArrayX.indexOf(i) != -1 && TileCollisionArrayY.indexOf(j) != -1) {
+                                            mySprite.y += 0 - (cury - MiniTilemaps.readDataNumber(mySprite, "prevy")) / repeat
+                                            cany = 0
+                                        }
                                     }
                                 }
                             }
