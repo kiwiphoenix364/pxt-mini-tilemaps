@@ -129,7 +129,7 @@ game.onUpdate(function () {
                                 if (TileCollisionArrayX.indexOf(i + Math.round(mySprite.left)) != -1) {
                                     for (let j = 0; j < mySprite.height; j++) {
                                         if (mySprite.image.getPixel(i,j) > 0) {
-                                            if (TileCollisionArrayX.indexOf(i + Math.round(mySprite.left)) != -1 && TileCollisionArrayY.indexOf(j + Math.round(mySprite.top)) != -1) {
+                                            if (TileCollisionArrayX.indexOf(i + mySprite.left) != -1 && TileCollisionArrayY.indexOf(j + mySprite.top) != -1) {
                                                 mySprite.x += 0 - (curx - MiniTilemaps.readDataNumber(mySprite, "prevx")) / repeat
                                                 canx = 0
                                             }
@@ -147,7 +147,7 @@ game.onUpdate(function () {
                                     if (TileCollisionArrayX.indexOf(i + Math.round(mySprite.left)) != -1) {
                                         for (let j = 0; j < mySprite.height; j++) {
                                             if (mySprite.image.getPixel(i, j) > 0) {
-                                                if (TileCollisionArrayX.indexOf(i + Math.round(mySprite.left)) != -1 && TileCollisionArrayY.indexOf(j + Math.round(mySprite.top)) != -1) {
+                                                if (TileCollisionArrayX.indexOf(i + mySprite.left) != -1 && TileCollisionArrayY.indexOf(j + mySprite.top) != -1) {
                                                     mySprite.y += 0 - (cury - MiniTilemaps.readDataNumber(mySprite, "prevy")) / repeat
                                                     cany = 0
                                                 }
