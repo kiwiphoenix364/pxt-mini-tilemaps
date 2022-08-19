@@ -126,10 +126,10 @@ game.onUpdate(function () {
                         mySprite.x += (curx - MiniTilemaps.readDataNumber(mySprite, "prevx")) / repeat
                         if (canx == 1) {
                             for (let i = 0; i < mySprite.width; i++) {
-                                if (TileCollisionArrayX.indexOf(i + mySprite.left) >= 0) {
+                                if (TileCollisionArrayX.indexOf(Math.round(i + mySprite.left)) != -1) {
                                     for (let j = 0; j < mySprite.height; j++) {
                                         if (mySprite.image.getPixel(i,j) > 0) {
-                                            if (TileCollisionArrayX.indexOf(i + mySprite.left) >= 0 && TileCollisionArrayY.indexOf(j + mySprite.top) >= 0) {
+                                            if (TileCollisionArrayX.indexOf(Math.round(i + mySprite.left)) != -1 && TileCollisionArrayY.indexOf(Math.round(j + mySprite.top)) != -1) {
                                                 mySprite.x += 0 - (curx - MiniTilemaps.readDataNumber(mySprite, "prevx")) / repeat
                                                 canx = 0
                                             }
@@ -144,10 +144,10 @@ game.onUpdate(function () {
                         for (let index22 = 0; index22 <= TileCollisionArrayY.length; index22++) {
                             if (cany == 1) {
                                 for (let i = 0; i < mySprite.width; i++) {
-                                    if (TileCollisionArrayX.indexOf(i + mySprite.left) >= 0) {
+                                    if (TileCollisionArrayX.indexOf(Math.round(i + mySprite.left)) != -1) {
                                         for (let j = 0; j < mySprite.height; j++) {
                                             if (mySprite.image.getPixel(i, j) > 0) {
-                                                if (TileCollisionArrayX.indexOf(i + mySprite.left) >= 0 && TileCollisionArrayY.indexOf(j + mySprite.top) >= 0) {
+                                                if (TileCollisionArrayX.indexOf(Math.round(i + mySprite.left)) != -1 && TileCollisionArrayY.indexOf(Math.round(j + mySprite.top)) != -1) {
                                                     mySprite.y += 0 - (cury - MiniTilemaps.readDataNumber(mySprite, "prevy")) / repeat
                                                     cany = 0
                                                 }
