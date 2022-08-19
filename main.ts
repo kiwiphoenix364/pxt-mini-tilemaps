@@ -126,7 +126,7 @@ game.onUpdate(function () {
                 for (let index = 0; index <= repeat; index++) {
                     if (canx == 1) {
                         mySprite.x += (curx - MiniTilemaps.readDataNumber(mySprite, "prevx")) / repeat
-                        left = Math.floor(mySprite.left)
+                        left = mySprite.left
                         if (canx == 1) {
                             for (let i = 0; i < mySprite.width; i++) {
                                 if (TileCollisionArrayX.indexOf(i + left) != -1) {
@@ -144,7 +144,7 @@ game.onUpdate(function () {
                     }
                     if (cany == 1) {
                         mySprite.y += (cury - MiniTilemaps.readDataNumber(mySprite, "prevy")) / repeat
-                        top = Math.floor(mySprite.top)
+                        top = mySprite.top
                         if (cany == 1) {
                             for (let i = 0; i < mySprite.width; i++) {
                                 if (TileCollisionArrayX.indexOf(i + left) != -1) {
