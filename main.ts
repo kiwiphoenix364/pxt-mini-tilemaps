@@ -145,16 +145,14 @@ game.onUpdate(function () {
                     if (cany == 1) {
                         mySprite.y += (cury - MiniTilemaps.readDataNumber(mySprite, "prevy")) / repeat
                         top = Math.floor(mySprite.top)
-                        for (let index22 = 0; index22 <= TileCollisionArrayY.length; index22++) {
-                            if (cany == 1) {
-                                for (let i = 0; i < mySprite.width; i++) {
-                                    if (TileCollisionArrayX.indexOf(i + left) != -1) {
-                                        for (let j = 0; j < mySprite.height; j++) {
-                                            if (mySprite.image.getPixel(i, j) > 0) {
-                                                if (TileCollisionArrayX.indexOf(i + left) != -1 && TileCollisionArrayY.indexOf(j + top) != -1) {
-                                                    mySprite.y += 0 - (cury - MiniTilemaps.readDataNumber(mySprite, "prevy")) / repeat
-                                                    cany = 0
-                                                }
+                        if (cany == 1) {
+                            for (let i = 0; i < mySprite.width; i++) {
+                                if (TileCollisionArrayX.indexOf(i + left) != -1) {
+                                    for (let j = 0; j < mySprite.height; j++) {
+                                        if (mySprite.image.getPixel(i, j) > 0) {
+                                            if (TileCollisionArrayX.indexOf(i + left) != -1 && TileCollisionArrayY.indexOf(j + top) != -1) {
+                                                mySprite.y += 0 - (cury - MiniTilemaps.readDataNumber(mySprite, "prevy")) / repeat
+                                                cany = 0
                                             }
                                         }
                                     }
