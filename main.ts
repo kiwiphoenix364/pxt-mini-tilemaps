@@ -129,7 +129,7 @@ game.onUpdate(function () {
                                 if (TileCollisionArrayX.indexOf((Math.trunc((i + mySprite.left) * 16)) / 16) != -1) {
                                     for (let j = 0; j < mySprite.height; j++) {
                                         if (mySprite.image.getPixel(i,j) > 0) {
-                                            if (TileCollisionArrayX.indexOf((Math.trunc((i + mySprite.left) * 16)) / 16) != -1 && TileCollisionArrayY.indexOf((Math.trunc((i + mySprite.top) * 16)) / 16) != -1) {
+                                            if (TileCollisionArrayX.indexOf((Math.trunc((i + mySprite.left) * 16)) / 16) != -1 && TileCollisionArrayY.indexOf((Math.trunc((j + mySprite.top) * 16)) / 16) != -1) {
                                                 mySprite.x += 0 - (curx - MiniTilemaps.readDataNumber(mySprite, "prevx")) / repeat
                                                 canx = 0
                                             }
@@ -147,7 +147,7 @@ game.onUpdate(function () {
                                     if (TileCollisionArrayX.indexOf((Math.trunc((i + mySprite.left) * 16)) / 16) != -1) {
                                         for (let j = 0; j < mySprite.height; j++) {
                                             if (mySprite.image.getPixel(i, j) > 0) {
-                                                if (TileCollisionArrayX.indexOf((Math.trunc((i + mySprite.left) * 16)) / 16) != -1 && TileCollisionArrayY.indexOf((Math.trunc((i + mySprite.top) * 16)) / 16) != -1) {
+                                                if (TileCollisionArrayX.indexOf((Math.trunc((i + mySprite.left) * 16)) / 16) != -1 && TileCollisionArrayY.indexOf((Math.trunc((j + mySprite.top) * 16)) / 16) != -1) {
                                                     mySprite.y += 0 - (cury - MiniTilemaps.readDataNumber(mySprite, "prevy")) / repeat
                                                     cany = 0
                                                 }
