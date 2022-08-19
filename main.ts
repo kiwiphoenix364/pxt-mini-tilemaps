@@ -127,6 +127,7 @@ game.onUpdate(function () {
                     if (canx == 1) {
                         mySprite.x += (curx - MiniTilemaps.readDataNumber(mySprite, "prevx")) / repeat
                         left = mySprite.left
+                        mySprite.sayText(left)
                         if (canx == 1) {
                             for (let i = 0; i < mySprite.width; i++) {
                                 if (TileCollisionArrayX.indexOf(i + left) != -1) {
